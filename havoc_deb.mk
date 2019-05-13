@@ -1,14 +1,13 @@
-
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1200
 TARGET_BOOTANIMATION_HALF_RES := true
 
-# Inherit some common AICP stuff.
-$(call inherit-product, vendor/aicp/config/common_full_tablet_lte.mk)
+# Inherit some common HavocOS stuff.
+$(call inherit-product, vendor/havoc/config/common.mk)
 
 # Inherit telephony stuff
-$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
+$(call inherit-product, vendor/havoc/config/telephony.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
@@ -19,7 +18,7 @@ $(call inherit-product-if-exists, vendor/asus/deb/device-vendor.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := deb
-PRODUCT_NAME := aicp_deb
+PRODUCT_NAME := havoc_deb
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := asus

@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/aicp_deb.mk
+	$(LOCAL_DIR)/havoc_deb.mk
